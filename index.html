@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thala for a reason</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+      }
+      .input-box {
+        width: 300px;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 auto; /* Center the input horizontally */
+        align-self: center;
+      }
+
+      .card {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px auto; /* Center the card horizontally */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+        align-items: center; /* Center the image vertically */
+      }
+
+      .card img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .input-btn {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 auto; /* Center the input horizontally */
+        align-self: center;
+      }
+      #loading_animation {
+        display: none;
+        width: 100px;
+        height: 100px;
+        background-image: url("https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="w-full  bg-blue-300 px-5 py-3">
+      <nav class="w-full flex justify-center">
+        <p class="text-lg font-bold text-blue-800">Thala For A Reason</p>
+      </nav>
+    </header>
+    
+    <form onsubmit="return captionMeme();">
+      <input
+        type="text"
+        id="input1"
+        class="input-box"
+        placeholder="Enter your text here"
+      />
+      <button type="submit" class="input-btn">Generate</button>
+    </form>
+
+    <div class="card">
+      <img
+        src="https://i.imgflip.com/89rkwi.jpg"
+        alt="Meme Image"
+        id="meme_image"
+      />
+      <div id="loading_animation"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
